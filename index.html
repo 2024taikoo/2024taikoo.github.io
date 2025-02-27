@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>马尔文帕纳科课程筛选系统</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="logo.png" alt="Malvern Panalytical Logo">
+  </div>
+
+  <div class="header">
+    <h1 style="color: black;">马尔文帕纳科课程筛选系统</h1>
+  </div>
+
+  <div class="filter-container">
+    <div class="filter-group">
+      <h3>行业：</h3>
+      <label><input type="checkbox" value="Biologics" class="industry-filter"> Biologics</label>
+      <label><input type="checkbox" value="Pharmaceutical" class="industry-filter"> Pharmaceutical</label>
+    </div>
+
+    <div class="filter-group">
+      <h3>技术：</h3>
+      <label><input type="checkbox" value="DLS" class="technology-filter"> DLS</label>
+      <label><input type="checkbox" value="DSC" class="technology-filter"> DSC</label>
+      <label><input type="checkbox" value="XRD" class="technology-filter"> XRD</label>
+      <label><input type="checkbox" value="ITC" class="technology-filter"> ITC</label>
+      <label><input type="checkbox" value="NTA" class="technology-filter"> NTA</label>
+      <label><input type="checkbox" value="GPC" class="technology-filter"> GPC</label>
+      <label><input type="checkbox" value="GCI" class="technology-filter"> GCI</label>
+      <label><input type="checkbox" value="LD" class="technology-filter"> LD</label>
+      <label><input type="checkbox" value="MDRS" class="technology-filter"> MDRS</label>
+      <label><input type="checkbox" value="XRF" class="technology-filter"> XRF</label>
+      <label><input type="checkbox" value="Spraytec" class="technology-filter"> Spraytec</label>
+    </div>
+
+    <div class="filter-group">
+      <h3>感兴趣：</h3>
+      <label><input type="checkbox" value="解决方案" class="interested-filter"> 解决方案</label>
+      <label><input type="checkbox" value="行业应用" class="interested-filter"> 行业应用</label>
+      <label><input type="checkbox" value="技术培训" class="interested-filter"> 技术培训</label>
+      <label><input type="checkbox" value="方法开发" class="interested-filter"> 方法开发</label>
+      <label><input type="checkbox" value="方法转移" class="interested-filter"> 方法转移</label>
+      <label><input type="checkbox" value="维护保养" class="interested-filter"> 维护保养</label>
+      <label><input type="checkbox" value="数据管理" class="interested-filter"> 数据管理</label>
+      <label><input type="checkbox" value="仪器demo" class="interested-filter"> 仪器demo</label>
+      <label><input type="checkbox" value="软件培训" class="interested-filter"> 软件培训</label>
+      <label><input type="checkbox" value="答疑" class="interested-filter"> 答疑</label>
+      <label><input type="checkbox" value="售后培训" class="interested-filter"> 售后培训</label>
+      <label><input type="checkbox" value="Troubleshooting" class="interested-filter"> Troubleshooting</label>
+      <label><input type="checkbox" value="法规解读" class="interested-filter"> 法规解读</label>
+    </div>
+
+    <div class="filter-group">
+      <h3>讲师：</h3>
+      <label><input type="checkbox" value="韩佩韦" class="speaker-filter"> 韩佩韦</label>
+      <label><input type="checkbox" value="陈丽" class="speaker-filter"> 陈丽</label>
+      <label><input type="checkbox" value="范洋晶" class="speaker-filter"> 范洋晶</label>
+      <label><input type="checkbox" value="秦怡" class="speaker-filter"> 秦怡</label>
+      <label><input type="checkbox" value="黎小宇" class="speaker-filter"> 黎小宇</label>
+      <label><input type="checkbox" value="李蓓" class="speaker-filter"> 李蓓</label>
+      <label><input type="checkbox" value="李航伟" class="speaker-filter"> 李航伟</label>
+      <label><input type="checkbox" value="朱晓东" class="speaker-filter"> 朱晓东</label>
+      <label><input type="checkbox" value="陈辰" class="speaker-filter"> 陈辰</label>
+      <label><input type="checkbox" value="蔡厚安" class="speaker-filter"> 蔡厚安</label>
+    </div>
+
+    <div class="filter-group">
+      <h3>仪器：</h3>
+      <label><input type="checkbox" value="PEAQ-ITC" class="product-filter"> PEAQ-ITC</label>
+      <label><input type="checkbox" value="PEAQ-DSC" class="product-filter"> PEAQ-DSC</label>
+      <label><input type="checkbox" value="Zetasizer" class="product-filter"> Zetasizer</label>
+      <label><input type="checkbox" value="Morphologi4-ID" class="product-filter"> Morphologi4-ID</label>
+      <label><input type="checkbox" value="Emprean/Aeris" class="product-filter"> Emprean/Aeris</label>
+      <label><input type="checkbox" value="WAVE分子互作仪" class="product-filter"> WAVE分子互作仪</label>
+      <label><input type="checkbox" value="Mastersizer" class="product-filter"> Mastersizer</label>
+      <label><input type="checkbox" value="GPC凝胶色谱仪" class="product-filter"> GPC凝胶色谱仪</label>
+      <label><input type="checkbox" value="NanoSight" class="product-filter"> NanoSight</label>
+      <label><input type="checkbox" value="Epsilon/Revontium" class="product-filter"> Epsilon/Revontium</label>
+      <label><input type="checkbox" value="Spraytec" class="product-filter"> Spraytec</label>
+    </div>
+  </div>
+
+  <div class="speaker-intro">
+    <h2>讲师介绍</h2>
+    <div class="speaker-cards">
+      <div class="speaker-card">
+        <img src="han_peiwei.jpg" alt="韩佩韦">
+        <h3>韩佩韦</h3>
+        <p>中科院生物物理生物化学和生物物理学博士，曾任职于通用电气（中国）医疗集团生命科学部，负责从蛋白质组学到分子间相互作用相关技术包括SPR和微量热技术和市场推广，担任技术经理、Biacore & Microcal产品经理和Label-Free技术资深应用科学家等职位。2014年11月，加入马尔文公司负责微量热产品的新应用开发以及市场推广。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="chen_li.jpg" alt="陈丽">
+        <h3>陈丽</h3>
+        <p>拥有十五年以上的小分子原料药研发分析服务经验，负责医药与食品行业马尔文帕纳科产品的技术支持和市场拓展，以及客户问题的支持解决等。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="fan_yangjing.jpg" alt="范洋晶">
+        <h3>范洋晶</h3>
+        <p>硕士毕业于上海交通大学生物学专业，研究方向为血管细胞参与内膜损伤后的修复机制，并参与多个国家自然科学基金项目。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="qin_yi.jpg" alt="秦怡">
+        <h3>秦怡</h3>
+        <p>硕士毕业于天津大学生物学专业，主要研究方向为基于核酸系统和纳米材料构建新型癌症诊疗探针，参与多项国家级、市级科研项目，发表多篇相关SCI论文。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="li_xiaoyu.jpg" alt="黎小宇">
+        <h3>黎小宇</h3>
+        <p>毕业于华东师范大学分析化学专业，后加入原马尔文公司从事激光粒度仪、图像粒度仪、纳米粒度及Zeta电位仪的应用和技术支持工作，具备15年以上的粒度系列产品应用、培训经验。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="li_bei.jpg" alt="李蓓">
+        <h3>李蓓</h3>
+        <p>毕业于华南理工大学，2019年加入马尔文帕纳科公司，从事激光粒度仪、纳米粒度仪的应用培训和技术支持等工作。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="li_hangwei.jpg" alt="李航伟">
+        <h3>李航伟</h3>
+        <p>硕士毕业于上海大学，专注于合成聚合物、生物大分子，以及小分子药物等领域的应用研究。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="zhu_xiaodong.jpg" alt="朱晓东">
+        <h3>朱晓东</h3>
+        <p>2006年硕士毕业于清华大学材料科学与工程系。后加入马尔文帕纳科公司，任职X射线衍射应用专家，从事X射线衍射分析技术的应用和技术支持工作。具有15年以上客户培训和各行业应用支持经验。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="chen_chen.jpg" alt="陈辰">
+        <h3>陈辰</h3>
+        <p>毕业于复旦大学高分子科学系。2022年加入马尔文帕纳科公司，负责X射线衍射应用技术培训与发展 具有7年X射线衍射技术相关工作经历。</p>
+      </div>
+      <div class="speaker-card">
+        <img src="cai_houan.jpg" alt="蔡厚安">
+        <h3>蔡厚安</h3>
+        <p>毕业于华东理工大学生物化学专业，2012年加入马尔文帕纳科公司，负责售后服务技术支持工作，具有12年粒度分析技术支持经验。现任马尔文帕纳科技术中心经理，粒度仪产品线售后服务团队培训师。</p>
+      </div>
+    </div>
+  </div>
+
+  <table id="courseTable">
+    <thead>
+      <tr>
+        <th>主题</th>
+        <th>讲师</th>
+        <th>技术</th>
+        <th>行业</th>
+        <th>感兴趣</th>
+        <th>仪器</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 课程数据 -->
+    </tbody>
+  </table>
+
+  <script>
+     const courses = [
+  {
+    title: "抗体偶联药物-ADCs马尔文帕纳科解决方案",
+    speaker: ["范洋晶"],
+    technologies: ["ITC", "DSC", "DLS"],
+    industry: ["Biologics"],
+    interested: ["解决方案"],
+    product: ["PEAQ-ITC", "PEAQ-DSC", "Zetasizer"]
+  },
+  {
+    title: "如何借助图像导向拉曼光谱技术（MDRS）豁免仿制药临床终点研究",
+    speaker: ["陈丽"],
+    technologies: ["MDRS"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Morphologi4-ID"]
+  },
+  {
+    title: "XRD 技术历史、原理及法规基础",
+    speaker: ["陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["技术培训"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "XRD设备选型及应用案例分析",
+    speaker: ["陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "扩展分子互作结合分析的边界 – 新一代光栅耦合干涉技术(GCI)",
+    speaker: ["韩佩韦"],
+    technologies: ["GCI"],
+    industry: ["Pharmaceutical", "Biologics"],
+    interested: ["技术培训"],
+    product: ["WAVE分子互作仪"]
+  },
+  {
+    title: "Mastersizer3000激光粒度仪方法开发一次讲清楚",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["方法开发"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "成功实现Mastersizer 2000到3000的方法转移",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["方法转移"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "中药理化表征与质量研究",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["解决方案"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "中药创新研究中ITC技术在靶点确认中的应用",
+    speaker: ["范洋晶"],
+    technologies: ["ITC"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["PEAQ-ITC"]
+  },
+  {
+    title: "SEC-MALS20用于rAAV研究的案例分析",
+    speaker: ["李航伟"],
+    technologies: ["GPC"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["GPC凝胶色谱仪"]
+  },
+  {
+    title: "DLS在rAAV关键质量属性研究的应用",
+    speaker: ["李航伟"],
+    technologies: ["DLS"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["Zetasizer"]
+  },
+  {
+    title: "化学药物微量晶型的X-射线衍射测定",
+    speaker: ["陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "WAVE新一代动力学 - 和阻塞的流路与浓度梯度说“拜拜”",
+    speaker: ["韩佩韦"],
+    technologies: ["GCI"],
+    industry: ["Pharmaceutical", "Biologics"],
+    interested: ["技术培训"],
+    product: ["WAVE分子互作仪"]
+  },
+  {
+    title: "溶液内分子互作金标准-ITC原理与应用",
+    speaker: ["韩佩韦"],
+    technologies: ["ITC"],
+    industry: [],
+    interested: ["技术培训", "行业应用"],
+    product: ["PEAQ-ITC"]
+  },
+  {
+    title: "新一代分子互作动力学分析-GCI原理与应用",
+    speaker: ["韩佩韦", "秦怡"],
+    technologies: ["GCI"],
+    industry: [],
+    interested: ["技术培训", "行业应用"],
+    product: ["WAVE分子互作仪"]
+  },
+  {
+    title: "DLS在脂质纳米颗粒表征中的应用",
+    speaker: ["李航伟"],
+    technologies: ["DLS"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["Zetasizer"]
+  },
+  {
+    title: "化药开发中的粒度表征技术及应用和方法开发",
+    speaker: ["黎小宇", "陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["方法开发", "行业应用"],
+    product: ["Mastersizer", "Spraytec", "Morphologi4-ID"]
+  },
+  {
+    title: "晶型研究中XRD在制药研发质控完整方案的应用",
+    speaker: ["陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "Mastersizer使用中的维护保养与数据完整性方案",
+    speaker: ["蔡厚安"],
+    technologies: ["LD"],
+    industry: [],
+    interested: ["维护保养", "数据管理"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "纳米粒度仪的应用及方法开发",
+    speaker: ["李蓓"],
+    technologies: ["DLS"],
+    industry: [],
+    interested: ["行业应用", "方法开发"],
+    product: ["Zetasizer"]
+  },
+  {
+    title: "XRD技术助力药物晶型表征",
+    speaker: ["陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "药物研发中的非标记生物物理表征方法及应用案例",
+    speaker: ["韩佩韦"],
+    technologies: ["ITC", "DSC", "GCI"],
+    industry: ["Pharmaceutical", "Biologics"],
+    interested: ["行业应用"],
+    product: ["PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "纳米颗粒的正交表征技术DLS&NTA",
+    speaker: ["李蓓"],
+    technologies: ["DLS", "NTA"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["Zetasizer", "NanoSight"]
+  },
+  {
+    title: "NS Pro现场Demo演示",
+    speaker: ["李蓓", "秦怡", "范洋晶"],
+    technologies: ["NTA"],
+    industry: [],
+    interested: ["仪器demo"],
+    product: ["NanoSight"]
+  },
+  {
+    title: "LNP中的生物物理表征方法",
+    speaker: ["韩佩韦"],
+    technologies: ["DLS", "NTA", "ITC", "DSC", "GCI"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["Zetasizer", "NanoSight", "PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "NanoSight操作技巧，提升数据质量",
+    speaker: ["韩涛"],
+    technologies: ["NTA"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["NanoSight"]
+  },
+  {
+    title: "NTA在EV研究中的应用及新一代NS Pro技术优势",
+    speaker: ["韩佩韦"],
+    technologies: ["NTA"],
+    industry: ["Biologics"],
+    interested: ["技术培训"],
+    product: ["NanoSight"]
+  },
+  {
+    title: "激光粒度仪方法开发经验分享",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: [],
+    interested: ["方法开发"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "XRD软件使用常见问题分享",
+    speaker: ["陈辰"],
+    technologies: ["XRD"],
+    industry: [],
+    interested: ["软件培训"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "药物颗粒成像分析技术的法规解读与应用前景",
+    speaker: ["陈丽"],
+    technologies: ["MDRS"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Morphologi4-ID"]
+  },
+  {
+    title: "XRF药物元素杂质分析要点",
+    speaker: ["陈丽"],
+    technologies: ["XRF"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Epsilon/Revontium"]
+  },
+  {
+    title: "LNP&EV研究中的生物物理表征方法及应用案例",
+    speaker: ["韩佩韦"],
+    technologies: ["DLS", "NTA", "ITC", "DSC", "GCI"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["Zetasizer", "NanoSight", "PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "NTA技术优势和实验设计优化",
+    speaker: ["范洋晶"],
+    technologies: ["NTA"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["NanoSight"]
+  },
+  {
+    title: "GPC及其多检测器技术在药物开发中的应用",
+    speaker: ["李航伟"],
+    technologies: ["GPC"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["GPC凝胶色谱仪"]
+  },
+  {
+    title: "非标记分子互作平台-结合动力学与热力学分析在药物开发中的应用",
+    speaker: ["韩佩韦"],
+    technologies: ["ITC", "DSC", "GCI"],
+    industry: ["Pharmaceutical", "Biologics"],
+    interested: ["行业应用"],
+    product: ["PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "DSC在生物样品热稳定性分析中的应用",
+    speaker: ["韩佩韦", "范洋晶"],
+    technologies: ["DSC"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["PEAQ-DSC"]
+  },
+  {
+    title: "激光粒度仪测试原辅料和中间体的粒度分布技术",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "制药行业X射线衍射解决方案",
+    speaker: ["朱晓东", "陈丽"],
+    technologies: ["XRD"],
+    industry: ["Pharmaceutical"],
+    interested: ["解决方案"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "药物颗粒粒径&粒型表征技术及应用",
+    speaker: ["黎小宇"],
+    technologies: ["LD", "MDRS"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Mastersizer", "Morphologi4-ID"]
+  },
+  {
+    title: "非标记分析平台在生物药物筛选及稳定性方面的应用",
+    speaker: ["韩佩韦"],
+    technologies: ["ITC", "DSC", "GCI"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "生物制药中纳米粒度仪的应用和方法开发",
+    speaker: ["李航伟"],
+    technologies: ["DLS"],
+    industry: ["Biologics"],
+    interested: ["行业应用", "方法开发"],
+    product: ["Zetasizer"]
+  },
+  {
+    title: "等温滴定量热仪ITC基础理论、应用及技术培训",
+    speaker: ["范洋晶"],
+    technologies: ["ITC"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["PEAQ-ITC"]
+  },
+  {
+    title: "差示扫描微量热仪DSC基础理论、应用及技术培训",
+    speaker: ["秦怡", "范洋晶"],
+    technologies: ["DSC"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["PEAQ-DSC"]
+  },
+  {
+    title: "DLS&NTA粒度表征原理及生物药中的应用",
+    speaker: ["李航伟"],
+    technologies: ["DLS", "NTA"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["Zetasizer", "NanoSight"]
+  },
+  {
+    title: "DSC原理及生物药热稳定性分析中的应用",
+    speaker: ["韩佩韦"],
+    technologies: ["DSC"],
+    industry: ["Biologics"],
+    interested: ["行业应用"],
+    product: ["PEAQ-DSC"]
+  },
+  {
+    title: "激光粒度仪用于药物分析的方法开发和答疑",
+    speaker: ["黎小宇"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["方法开发", "答疑"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "纳米粒度仪在药物研发的应用和方法开发",
+    speaker: ["李航伟"],
+    technologies: ["DLS"],
+    industry: ["Pharmaceutical"],
+    interested: ["方法开发", "行业应用"],
+    product: ["Zetasizer"]
+  },
+  {
+    title: "纳米颗粒跟踪分析仪原理及应用",
+    speaker: ["李蓓"],
+    technologies: ["NTA"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["NanoSight"]
+  },
+  {
+    title: "马尔文帕纳科在生物制药中的生物物理综合表征方案",
+    speaker: ["韩佩韦"],
+    technologies: ["DLS", "NTA", "ITC", "DSC", "GCI"],
+    industry: ["Biologics"],
+    interested: ["解决方案"],
+    product: ["Zetasizer", "NanoSight", "PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "Mastersizer 3000在微球、脂质体及化药研发中的应用",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "马尔文帕纳科在疫苗、蛋白类生物制药中的生物物理表征方案",
+    speaker: ["范洋晶"],
+    technologies: ["DLS", "NTA", "ITC", "DSC", "GCI"],
+    industry: ["Biologics"],
+    interested: ["解决方案"],
+    product: ["Zetasizer", "NanoSight", "PEAQ-ITC", "PEAQ-DSC", "WAVE分子互作仪"]
+  },
+  {
+    title: "马尔文帕纳科产品售后培训",
+    speaker: ["蔡厚安"],
+    technologies: ["LD", "XRD", "NTA", "DLS"],
+    industry: [],
+    interested: ["售后培训"],
+    product: ["Mastersizer", "Emprean/Aeris", "NanoSight", "Zetasizer"]
+  },
+  {
+    title: "激光粒度仪Q&A",
+    speaker: ["陈丽"],
+    technologies: ["LD"],
+    industry: [],
+    interested: ["答疑"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "粒度仪器随访、维护答疑",
+    speaker: ["韩涛"],
+    technologies: ["LD", "DLS", "NTA"],
+    industry: [],
+    interested: ["答疑"],
+    product: ["Mastersizer", "Zetasizer", "NanoSight"]
+  },
+  {
+    title: "XRF在小分子CMC中的应用",
+    speaker: ["陈丽"],
+    technologies: ["XRF"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用"],
+    product: ["Epsilon/Revontium"]
+  },
+  {
+    title: "ZetaSizer和MS3000设备维修维护及常见故障排除",
+    speaker: ["孙正茂"],
+    technologies: ["DLS", "LD"],
+    industry: [],
+    interested: ["维护保养", "Troubleshooting"],
+    product: ["Zetasizer", "Mastersizer"]
+  },
+  {
+    title: "XRD设备维修维护及常见故障排除",
+    speaker: ["臧学章", "陈丽"],
+    technologies: ["XRD"],
+    industry: [],
+    interested: ["维护保养", "Troubleshooting"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "鼻喷剂粒度分析的两种互补技术及FDA相关法规解读",
+    speaker: ["陈丽"],
+    technologies: ["Spraytec"],
+    industry: ["Pharmaceutical"],
+    interested: ["行业应用", "法规解读"],
+    product: ["Spraytec"]
+  },
+  {
+    title: "药物开发及质控中合规性深入解析及注意事项",
+    speaker: ["蔡厚安"],
+    technologies: ["数据合规"],
+    industry: ["Pharmaceutical", "Biologics"],
+    interested: ["数据管理"],
+    product: ["OmniTrust"]
+  },
+  {
+    title: "XRD应用培训及答疑",
+    speaker: ["朱晓东", "陈丽"],
+    technologies: ["XRD"],
+    industry: [],
+    interested: ["技术培训", "答疑"],
+    product: ["Emprean/Aeris"]
+  },
+  {
+    title: "实时动态图像附件Hydroinsight应用培训",
+    speaker: ["黎小宇"],
+    technologies: ["LD"],
+    industry: [],
+    interested: ["技术培训"],
+    product: ["Mastersizer"]
+  },
+  {
+    title: "激光粒度仪使用维护",
+    speaker: ["蔡厚安"],
+    technologies: ["LD"],
+    industry: [],
+    interested: ["维护保养"],
+    product: ["Mastersizer"]
+  }
+];
+
+
+    // 初始化表格
+    function renderCourses(filteredCourses = courses) {
+      const tbody = document.getElementById("courseTable").getElementsByTagName("tbody")[0];
+      tbody.innerHTML = "";
+      filteredCourses.forEach((course) => {
+        const row = tbody.insertRow();
+        row.insertCell().textContent = course.title;
+        row.insertCell().textContent = course.speaker.join(", ");
+        row.insertCell().textContent = course.technologies.join(", ");
+        row.insertCell().textContent = course.industry.join(", ");
+        row.insertCell().textContent = course.interested.join(", ");
+        row.insertCell().textContent = course.product.join(", ");
+      });
+    }
+
+    // 获取筛选条件
+    function getFilters() {
+      const industryFilters = Array.from(
+        document.querySelectorAll(".industry-filter:checked")
+      ).map((checkbox) => checkbox.value);
+
+      const technologyFilters = Array.from(
+        document.querySelectorAll(".technology-filter:checked")
+      ).map((checkbox) => checkbox.value);
+
+      const interestedFilters = Array.from(
+        document.querySelectorAll(".interested-filter:checked")
+      ).map((checkbox) => checkbox.value);
+
+      const speakerFilters = Array.from(
+        document.querySelectorAll(".speaker-filter:checked")
+      ).map((checkbox) => checkbox.value);
+
+      const productFilters = Array.from(
+        document.querySelectorAll(".product-filter:checked")
+      ).map((checkbox) => checkbox.value);
+
+      return {
+        industry: industryFilters,
+        technology: technologyFilters,
+        interested: interestedFilters,
+        speaker: speakerFilters,
+        product: productFilters,
+      };
+    }
+
+    // 过滤课程
+    function filterCourses() {
+      const filters = getFilters();
+
+      const filtered = courses.filter((course) => {
+        const industryMatch =
+          filters.industry.length === 0 ||
+          filters.industry.some((industry) => course.industry.includes(industry));
+
+        const technologyMatch =
+          filters.technology.length === 0 ||
+          filters.technology.some((tech) => course.technologies.includes(tech));
+
+        const interestedMatch =
+          filters.interested.length === 0 ||
+          filters.interested.some((interest) => course.interested.includes(interest));
+
+        const speakerMatch =
+          filters.speaker.length === 0 ||
+          filters.speaker.some((speaker) => course.speaker.includes(speaker));
+
+        const productMatch =
+          filters.product.length === 0 ||
+          filters.product.some((prod) => course.product.includes(prod));
+
+        return industryMatch && technologyMatch && interestedMatch && speakerMatch && productMatch;
+      });
+
+      renderCourses(filtered);
+    }
+
+    // 初始化筛选并绑定事件
+    document.querySelectorAll(".industry-filter, .technology-filter, .interested-filter, .speaker-filter, .product-filter").forEach(input => {
+      input.addEventListener("change", filterCourses);
+    });
+
+    // 初始化表格
+    renderCourses();
+  </script>
+</body>
+</html>
